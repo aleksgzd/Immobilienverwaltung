@@ -1,0 +1,40 @@
+﻿@model List<Immobilien>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1> Das sind meine Immobilien</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Vorname</th>
+        <th>Nachname</th>
+        <th>Telefonnummer</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+    @{
+        foreach (var Immobilien in Model)
+        {
+            
+        
+        <tr>
+            <td>@(Immobilien.GebäudeID)</td>
+            <td>@(Immobilien.Vorname)</td>
+            <td>@(Immobilien.Nachname)</td>
+            <td>@(Immobilien.Telefonnummer)</td>
+            <td>@(Immobilien.Email)</td>
+
+        </tr>
+        }
+    }
+    
+    </tbody>
+    
+    
+    
+</table>
